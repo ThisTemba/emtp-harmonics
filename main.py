@@ -64,6 +64,7 @@ def getNodeVoltageDict(xmlData, busNames):
                 nodeVoltages.append((node, moduleVoltage))
         freq = freqs[tableIndex]
         nodeVoltageDict[freq] = nodeVoltages
+    nodeVoltageDict = dict(sorted(nodeVoltageDict.items()))
     return nodeVoltageDict
 
 
@@ -224,6 +225,7 @@ def plotAllBarCharts(harmonicDistortions, outFolder):
         b = harmonicDistortions[nodeGroup + "b"]
         c = harmonicDistortions[nodeGroup + "c"]
         plotBarChart(a, b, c, nodeGroup, outFolder)
+
 
 def getCsvFilename(inputFilename):
     basename = os.path.basename(inputFilename)
