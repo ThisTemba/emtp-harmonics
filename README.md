@@ -1,10 +1,16 @@
 # EMTP Harmonic Table Reader
 
-This readme was based on comments in the original script
+Usage:
+
+1. Download `main.py`
+2. Ensure you have the python packages `numpy`, `lxml`, and `matplotlib` installed
+3. Run as follows: `python main.py [path to input html file]`
+
+It is easiest is if the html file is in the same directory as `main.py`. This way, the path is just the filename of the html file.
 
 ## Requirements
 
-You will need to install `numpy`, `lxml` and `matplotlib` to run this
+You will need to install
 
 ## harmonic_table_reader.py
 
