@@ -163,6 +163,7 @@ def addLegend(fig, ax):
 
 def plotBarChart(a, b, c, nodeGroup, outFolder):
     labels, avalues, bvalues, cvalues = getLabelsAndValues(a, b, c)
+    nodeGroup = nodeGroup.replace("_", " ")
 
     x = np.arange(len(labels))  # the label locations
     width = 0.2  # the width of the bars
@@ -177,7 +178,7 @@ def plotBarChart(a, b, c, nodeGroup, outFolder):
     ax.set_xlabel("Harmonic", fontweight="bold")
 
     # Title
-    title = "PCEP TPS2 Voltage Harmonic Distortion - " + nodeGroup
+    title = "PCEP TPS1 Voltage harmonic Distortion - " + nodeGroup
     configName = "C FMC-SJB Out"
     subtitle = "Cal001 Train Config " + configName
     plt.suptitle(title, fontsize=18, fontweight="bold")
